@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    color: white;
+    /* background-image: url('../img/bg.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh; */
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__formed {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+span {
+    padding: 30px;
+}
+
+input {
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 100px;
+    /* max-width: 120px;
+        min-width: 40px; */
+    height: 50px;
+}
+
+select {
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border-radius: 20px;
+    color: white;
+}
+
+.formed-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
