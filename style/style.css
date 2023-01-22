@@ -6,6 +6,8 @@
 }
 
 .page-wrapper {
+    font-family: 'Unbounded', cursive;
+    font-size: 30px;
     color: white;
     /* background-image: url('../img/bg.png');
     background-size: cover;
@@ -20,6 +22,7 @@
     width: 150px;
     border: none;
     border-radius: 20px;
+    font-family: 'Unbounded', cursive;
 }
 
 .container {
@@ -54,14 +57,15 @@ input {
     background: transparent;
     border: none;
     border-bottom: 1px solid grey;
-    width: 100px;
+    width: 200px;
     /* max-width: 120px;
         min-width: 40px; */
     height: 50px;
 }
 
 select {
-    width: 150px;
+    font-family: 'Unbounded', cursive;
+    width: 170px;
     height: 50px;
     background: transparent;
     border-radius: 20px;
@@ -87,4 +91,5 @@ select {
     border-radius: 20px;
     width: 300px;
     height: 600px;
+    display: none;
 }
