@@ -20,38 +20,43 @@
             <h1 class="title">Selectel Fitness</h1>
             <section class="content">
                 <div class="container">
-                    <form action="" class="container__formed">
+                    <form action="" class="container__formed" netlify>
                         <div class="formed-item">
-                            <input class="formed__check" type="checkbox">
-                            <input class="formed__check" type="checkbox">
+                            <input class="formed__check-male" type="checkbox" name="check">
+                            <input class="formed__check-female" type="checkbox"  name="check">
                         </div>
                         <div class="formed-item">
-                        <span>Вік</span> <input type="text"> <span>років</span>
+                        <span>Вік</span> <input type="text" class="age"> <span>років</span>
                     </div>
                     <div class="formed-item">
-                        <span>Вага</span> <input type="text"> <span>кг</span>
+                        <span>Вага</span> <input type="text" class="weight"> <span>кг</span>
                     </div>
                     <div class="formed-item">
-                        <span>Зріст</span> <input type="text"><span>см</span>
+                        <span>Зріст</span> <input type="text" class="tall"><span>см</span>
                     </div>
                     <div class="formed-item">
                     <span>Активність</span>  
                     <select class="selectel" name="" id="">
-                        <option value="1">Малоактивний</option>
-                        <option value="2">Наче шевєлюся</option>
-                        <option value="3">Бігаю на роботу</option>
-                        <option value="4">Літаю як Супермен</option>
+                        <option value="littleAct" class="littleAct">Малоактивний</option>
+                        <option value="middleeAct" class="middleeAct">Наче шевєлюся</option>
+                        <option value="highlyAct" class="highlyAct">Бігаю на роботу</option>
+                        <option value="ultraAct" class="ultraAct">Літаю як Супермен</option>
                     </select>
                 </div>
-                <div class="formed-item">
+                <div class="formed-item-GV">
                     <span>ГВ</span>  
                     <select class="selectel-two" name="" id="">
-                       
-                        <option value="1">Да</option>
-                        <option value="2">Нє</option>
+                        <option value="Yes">Да</option>
+                        <option value="No">Нє</option>
                     </select>
                 </div>
+                <button type="submit" class="calculate">Порахуйте!</button>
                     </form>
+                </div>
+                <div class="container">
+                    <div class="container__dov">
+
+                    </div>
                 </div>
             </section>
         </main>
