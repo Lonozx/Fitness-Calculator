@@ -16,6 +16,7 @@ let container__formed = document.querySelector('.container__formed');
 let container__dov = document.querySelector('.container__dov');
 let resulted = document.querySelector('.resulted');
 let info = document.querySelector('.info');
+let back = document.querySelector('.back');
 
 
 
@@ -32,14 +33,21 @@ let resultary;
 
 function genderIs(){
     if(female.checked){
-        formedGV.style.display = 'flex';}
+        formedGV.style.visibility = 'visible';}
         else {
-            formedGV.style.display = 'none';
+            formedGV.style.visibility = 'hidden';
         }
 }
 female.addEventListener('change', genderIs);
 
 
+function clean(){
+    // container__formed.style.display='flex';
+    container__formed.style.filter = "brightness(1)";
+    container__dov.style.filter='brightness(0)';
+}
+
+back.addEventListener('click', clean)
 
 function calculateInto(weights, talls, ages){
     let resultWeight;
@@ -59,21 +67,24 @@ function calculateInto(weights, talls, ages){
 // }
 
 calculate.addEventListener('click', ()=>{
-    container__formed.style.display='none';
-    container__dov.style.display='flex';
+    // container__formed.style.display='none';
+    container__formed.style.filter = "brightness(0)";
+    // container__dov.style.display='flex';
+    container__dov.style.filter = "brightness(1)";
+    // if()
     let quite = calculateInto(weight.value, tall.value, age.value);
     // console.log(calculateInto(weight.value, tall.value, age.value));
-    resulted.innerHTML = `IMT ${quite} <br>`;
+    resulted.innerHTML = `Базовий обмін ~ ${quite} ккал <br>`;
     // let resultary = parseFloat(resulted.value);
     const persentag1 = parseInt(quite*0.05);
     const persentag2 = parseInt(quite*0.10);
     const persentag3 = parseInt(quite*0.15);
     const persentag4 = parseInt(quite*0.20);
-    info.innerHTML = `Mетаболі́зм — сукупність хімічних реакцій, що відбуваються в живих організмах.`;
-    persentage1.innerHTML = `% 1 - ${persentag1} <br>`;
-    persentage2.innerHTML = `% 2 - ${persentag2} <br>`;
-    persentage3.innerHTML = `% 3 - ${persentag3} <br>`;
-    persentage4.innerHTML = `% 4 - ${persentag4} <br>`;
+    // info.innerHTML = `Mетаболі́зм — сукупність хімічних реакцій, що відбуваються в живих організмах.`;
+    persentage1.innerHTML = `Швидка втрата ваги ~ ${quite-persentag4} ккал <br>`;
+    persentage2.innerHTML = `Помірна втрата ваги ~ ${quite-persentag3} (${quite-persentag2}) ккал <br>`;
+    persentage3.innerHTML = `Збереження ваги ~ ${quite} ккал <br>`;
+    persentage4.innerHTML = `Збільшення ваги ~ ${persentag2+quite} ккал <br>`;
 }
     
 )

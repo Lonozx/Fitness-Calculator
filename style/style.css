@@ -82,7 +82,7 @@ select {
 }
 
 .formed-item-GV{
- display: none;
+ visibility: hidden;
 }
 .formed-item {
     /* border: 1px solid; */
@@ -96,12 +96,30 @@ select {
     justify-content: center;
 }
 
+.back{
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(255, 163, 77) 15.9%;
+    font-family: 'Unbounded', cursive;
+    color: white;
+    margin: 0 auto;
+    
+}
+.back:hover{
+    cursor: pointer;
+    background: rgb(255, 124, 0) 0%;
+}
+
 .container__dov{
+    filter: brightness(0);
     border: 1px solid grey;
     border-radius: 20px;
     flex-direction: column;
     width: 550px;
     height: 700px;
-    display: none;
+    display: flex;
     padding: 20px;
+    gap: 15px;
 }
