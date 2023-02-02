@@ -85,6 +85,8 @@ select {
  display: none;
 }
 .formed-item {
+    /* border: 1px solid; */
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +99,9 @@ select {
 .container__dov{
     border: 1px solid grey;
     border-radius: 20px;
-    width: 300px;
-    height: 600px;
+    flex-direction: column;
+    width: 550px;
+    height: 700px;
     display: none;
+    padding: 20px;
 }
