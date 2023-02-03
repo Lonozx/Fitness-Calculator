@@ -48,40 +48,49 @@ function clean(){
     container__formed.style.filter = "brightness(1)";
     container__dov.style.filter='brightness(0)';
 }
-
+let div = document.createElement('div');
+let p1 = document.createElement('p');
+let p2 = document.createElement('p');
+let p3 = document.createElement('p');
+let p4 = document.createElement('p');
+p1.innerHTML = `* Мало фізичних вправ, сидяча робота`;
+p2.innerHTML = `** Легкі вправи 1-3 дні/тиж`;
+p3.innerHTML = `*** Помірні вправи 3-5 днів/тиж`;
+p4.innerHTML = `**** Інтенс. фіз. нав./спорт 6-7 днів/тиж.`;
 function whatIs(){
-    let div = document.createElement('div');
-    let p1 = document.createElement('p');
-    let p2 = document.createElement('p');
-    let p3 = document.createElement('p');
-    let p4 = document.createElement('p');
+    p1.classList.add('description');
+    p2.classList.add('description');
+    p3.classList.add('description');
+    p4.classList.add('description');
     div.classList.add('argument')
+    div.style.visibility = 'visible';
     selectIn.append(div);
     div.append(p1,p2,p3,p4);
 }
 
-let onceFun = whatIs;
+   
+
+function clerifyWhat(){
+    div.style.visibility = 'hidden';
+}
 
 back.addEventListener('click', clean)
-what.addEventListener('mouseover', onceFun);
-// what.addEventListener('mouseout', whatIs);
+what.addEventListener('mouseover', whatIs);
+what.addEventListener('mouseout', clerifyWhat);
 
 function calculateInto(weights, talls, ages){
     let resultWeight;
     if(female.checked){
     resultWeight = (10*weights) + (6.25*talls) -(4.92*ages) - 161;
-    console.log(resultWeight+ 'sfasd');
+    console.log(resultWeight+ 'debug');
     } else if(male.checked){
+        // switch()
         resultWeight = (10*weights) + (6.25*talls) -(4.92*ages) + 5;
-    console.log(resultWeight+ 'sfasd');
+    console.log(resultWeight+ 'debug');
     }
     return resultWeight;
 }
-// calculate.onclick = ()=>{
-//     container__formed.style.display=none;
-//     container__dov.style.display=flex;
-//     calculateInto(weight.value, tall.value, age.value);
-// }
+
 
 calculate.addEventListener('click', ()=>{
     // container__formed.style.display='none';
