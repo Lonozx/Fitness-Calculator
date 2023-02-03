@@ -71,6 +71,13 @@ input {
     height: 50px;
 }
 
+.argument{
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 100px;
+    height: 200px;
+}
+
 select {
     font-family: 'Unbounded', cursive;
     width: 170px;

@@ -17,6 +17,8 @@ let container__dov = document.querySelector('.container__dov');
 let resulted = document.querySelector('.resulted');
 let info = document.querySelector('.info');
 let back = document.querySelector('.back');
+let what = document.querySelector('.what');
+let selectIn = document.querySelector('.selectIn');
 
 
 
@@ -47,7 +49,22 @@ function clean(){
     container__dov.style.filter='brightness(0)';
 }
 
+function whatIs(){
+    let div = document.createElement('div');
+    let p1 = document.createElement('p');
+    let p2 = document.createElement('p');
+    let p3 = document.createElement('p');
+    let p4 = document.createElement('p');
+    div.classList.add('argument')
+    selectIn.append(div);
+    div.append(p1,p2,p3,p4);
+}
+
+let onceFun = whatIs;
+
 back.addEventListener('click', clean)
+what.addEventListener('mouseover', onceFun);
+// what.addEventListener('mouseout', whatIs);
 
 function calculateInto(weights, talls, ages){
     let resultWeight;
