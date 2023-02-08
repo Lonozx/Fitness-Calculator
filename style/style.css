@@ -9,14 +9,16 @@
     font-family: 'Unbounded', cursive;
     font-size: 30px;
     color: white;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* background-image: url('../img/bg.png');
     background-size: cover;
     width: 100vw;
     height: 100vh; */
     background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
+    width: 100%;
+    height: 100%;
 }
 .calculate{
     height: 50px;

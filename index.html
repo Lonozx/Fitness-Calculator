@@ -1,84 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator Fitness</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="page-wrapper">
-        <header class="header">
-            <div class="container">
-
+      <header class="header">
+        <div class="container"></div>
+      </header>
+      <main class="contain-content">
+        <h1 class="title">Selectel Fitness</h1>
+        <section class="content">
+          <div class="container">
+            <div class="container__formed">
+              <div class="formed-item">
+                <input
+                  class="formed__check-male check"
+                  type="checkbox"
+                  name="check"
+                />М
+                <input
+                  class="formed__check-female check"
+                  type="checkbox"
+                  name="check"
+                />Ж
+              </div>
+              <div class="formed-item">
+                <span>Вік</span> <input type="text" class="age" />
+                <span>років</span>
+              </div>
+              <div class="formed-item">
+                <span>Вага</span> <input type="text" class="weight" />
+                <span>кг</span>
+              </div>
+              <div class="formed-item">
+                <span>Зріст</span> <input type="text" class="tall" /><span
+                  >см</span
+                >
+              </div>
+              <div class="formed-item selectIn">
+                <span>Активність</span>
+                <select class="selectel" name="" id="">
+                  <option value="littleAct" class="littleAct">
+                    Малоактивний
+                  </option>
+                  <option value="middleeAct" class="middleeAct">
+                    Наче шевєлюся
+                  </option>
+                  <option value="highlyAct" class="highlyAct">
+                    Бігаю на роботу
+                  </option>
+                  <option value="ultraAct" class="ultraAct">
+                    Літаю наче птах
+                  </option>
+                </select>
+                <span class="what">?</span>
+              </div>
+              <div class="formed-item-GV">
+                <span>ГВ</span>
+                <select class="selectel-two" name="" id="">
+                  <option value="Yes">Да</option>
+                  <option value="No">Нє</option>
+                </select>
+              </div>
+              <button type="submit" class="calculate">Порахуйте!</button>
+              <div class="out-f"></div>
             </div>
-        </header>
-        <main class="contain-content">
-            <h1 class="title">Selectel Fitness</h1>
-            <section class="content">
-                <div class="container">
-                    <div class="container__formed">
-                        <div class="formed-item">
-                            <input class="formed__check-male check" type="checkbox" name="check">М
-                            <input class="formed__check-female check" type="checkbox" name="check">Ж
-                        </div>
-                        <div class="formed-item">
-                            <span>Вік</span> <input type="text" class="age"> <span>років</span>
-                        </div>
-                        <div class="formed-item">
-                            <span>Вага</span> <input type="text" class="weight"> <span>кг</span>
-                        </div>
-                        <div class="formed-item">
-                            <span>Зріст</span> <input type="text" class="tall"><span>см</span>
-                        </div>
-                        <div class="formed-item selectIn">
-                            <span>Активність</span>
-                            <select class="selectel" name="" id="">
-                                <option value="littleAct" class="littleAct">Малоактивний</option>
-                                <option value="middleeAct" class="middleeAct">Наче шевєлюся</option>
-                                <option value="highlyAct" class="highlyAct">Бігаю на роботу</option>
-                                <option value="ultraAct" class="ultraAct">Літаю наче птах</option>
-                            </select>
-                            <span class="what">?</span>
-                        </div>
-                        <div class="formed-item-GV">
-                            <span>ГВ</span>
-                            <select class="selectel-two" name="" id="">
-                                <option value="Yes">Да</option>
-                                <option value="No">Нє</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="calculate">Порахуйте!</button>
-                        <div class="out-f">
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="container">
-                    <div class="container__dov">
-                        <h2 class="resulted"></h2>
-                        <p class="info"></p>
-                        <p class="persentage1">0</p>
-                        <p class="persentage2">0</p>
-                        <p class="persentage3">0</p>
-                        <p class="persentage4">0</p>
-                        <button class="back">Назад</button>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-
-
+          </div>
+          <div class="container">
+            <div class="container__dov">
+              <h2 class="resulted"></h2>
+              <p class="info"></p>
+              <p class="persentage1"></p>
+              <p class="persentage2"></p>
+              <p class="persentage3"></p>
+              <p class="persentage4"></p>
+              <button class="back">Назад</button>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <script src="./script/main.js"></script>
-</body>
-
+  </body>
 </html>
